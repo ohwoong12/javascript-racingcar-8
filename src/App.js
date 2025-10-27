@@ -1,3 +1,4 @@
+import { Console } from '@woowacourse/mission-utils';
 import * as GameLogic from './GameLogic.js';
 
 class App {
@@ -11,6 +12,9 @@ class App {
     Console.print('\n실행 결과');
     // 레이스 실행
     GameLogic.runRace(carsObj, tryNumber);
+
+    // 최종 우승자 출력
+    GameLogic.printWinners(carsObj);
   }
 }
 

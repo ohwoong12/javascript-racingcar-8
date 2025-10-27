@@ -71,4 +71,13 @@ export function getWinners(cars) {
 
   return finalWinner;
 }
+
+/**
+ * 최종 우승자를 출력하는 함수
+ * @param {object[]} cars - 레이스가 완료된 자동차 객체 배열
+ */
+export function printWinners(cars) {
+  const finalWinner = getWinners(cars);
+
+  Console.print(`최종 우승자 : ${finalWinner.join(', ')}`);
   }
