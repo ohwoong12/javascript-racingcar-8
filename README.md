@@ -70,6 +70,6 @@
 
 - [ ] 테스트 코드 작성
   - [x] GameLogic.js 테스트
-  - [ ] CircuitScore.js 테스트
+  - [x] CircuitScore.js 테스트
   - [ ] PrintExeResult.js 테스트
   - [ ] 유효성 함수 테스트
