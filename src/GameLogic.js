@@ -34,3 +34,16 @@ export async function getTryNumber() {
 export function createCarsObj(carAry) {
   return carAry.map((name) => ({ name, score: '' }));
 }
+
+/**
+ * 자동차 객체를 매개변수로 받아 레이스 실행 후 결과를 출력하는 함수
+ * @param {object[]} cars - 자동차 객체 배열
+ * @param {number} tryNumber - 시도 횟수
+ */
+export function runRace(cars, tryNumber) {
+  // 입력받은 횟수만큼 반복하여 각 라운드 결과 출력
+  for (let i = 0; i < tryNumber; i += 1) {
+    CircuitScore(cars);
+  }
+}
+  }
