@@ -11,3 +11,9 @@ export function validateCarNameType(ele) {
     throw new Error(ERROR_MESSAGE.INVALID_CAR_NAME_TYPE);
   }
 }
+
+export function validateCarNameExist(ele) {
+  if (ele.includes('')) {
+    throw new Error(ERROR_MESSAGE.INVALID_CAR_NAME_EMPTY);
+  }
+}
