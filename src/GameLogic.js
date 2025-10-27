@@ -50,4 +50,25 @@ export function runRace(cars, tryNumber) {
     printExeResult(cars);
   }
 }
+
+/**
+ * 레이스가 끝난 자동차 객체에서 최종 우승자를 가려내는 함수
+ * @param {object[]} cars - 레이스가 완료된 자동차 객체 배열
+ * @returns {string[]} - 최종 우승자 이름 배열
+ */
+export function getWinners(cars) {
+  // score의 길이를 순회하여 새로운 배열로 저장
+  const scoreLengthAry = cars.map((a) => a.score.length);
+
+  // 길이가 제일 높은 점수 찾기
+  const maxLength = Math.max(...scoreLengthAry);
+
+  // 제일 긴 점수를 바탕으로 해당 점수를 가진 자동차 추출 후 새로운 배열 반환
+  const filteredScore = cars.filter((a) => a.score.length === maxLength);
+
+  // filteredScore를 순회하여 최종 우승자만 추출
+  const finalWinner = filteredScore.map((winner) => winner.name);
+
+  return finalWinner;
+}
   }
