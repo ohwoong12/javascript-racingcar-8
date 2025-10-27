@@ -12,3 +12,16 @@ export async function getCarNames() {
 
   return carNamesAry;
 }
+/**
+ * 시도할 입력 횟수를 입력 받고 숫자로 반환하는 함수
+ * @returns {Promise<number>} - 시도할 횟수
+ */
+export async function getTryNumber() {
+  const tryNumberInput = await Console.readLineAsync(
+    CONSOLE_MESSAGE.SELECT_TRY_NUMBER,
+  );
+
+  const tryNumber = Number(tryNumberInput); // 검증 후 숫자로 변환
+
+  return tryNumber;
+}
