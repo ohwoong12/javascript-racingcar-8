@@ -1,5 +1,7 @@
 import { Console } from '@woowacourse/mission-utils';
 import { CONSOLE_MESSAGE } from './Constants.js';
+import printExeResult from './printExeResult.js';
+import CircuitScore from './CircuitScore.js';
 
 /**
  * 자동차 이름을 입력받고 배열로 반환하는 함수
@@ -44,6 +46,8 @@ export function runRace(cars, tryNumber) {
   // 입력받은 횟수만큼 반복하여 각 라운드 결과 출력
   for (let i = 0; i < tryNumber; i += 1) {
     CircuitScore(cars);
+    Console.print('');
+    printExeResult(cars);
   }
 }
   }
