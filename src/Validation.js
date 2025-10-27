@@ -5,3 +5,9 @@ export function validateNameLength(ary) {
     throw new Error(ERROR_MESSAGE.INVALID_NAME_LENGTH);
   }
 }
+
+export function validateCarNameType(ele) {
+  if (ele.some((item) => !Number.isNaN(Number(item))) === true) {
+    throw new Error(ERROR_MESSAGE.INVALID_CAR_NAME_TYPE);
+  }
+}

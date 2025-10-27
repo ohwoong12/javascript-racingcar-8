@@ -15,6 +15,7 @@ export async function getCarNames() {
 
   // 유효성 검사
   Validation.validateNameLength(carNamesAry);
+  Validation.validateCarNameType(carNamesAry);
 
   return carNamesAry;
 }
