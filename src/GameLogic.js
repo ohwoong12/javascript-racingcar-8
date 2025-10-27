@@ -29,7 +29,9 @@ export async function getTryNumber() {
     CONSOLE_MESSAGE.SELECT_TRY_NUMBER,
   );
 
+  Validation.validateTryNumberType(tryNumberInput);
   const tryNumber = Number(tryNumberInput); // 검증 후 숫자로 변환
+  Validation.validateTryNumberPositive(tryNumber);
 
   return tryNumber;
 }
@@ -86,4 +88,4 @@ export function printWinners(cars) {
   const finalWinner = getWinners(cars);
 
   Console.print(`최종 우승자 : ${finalWinner.join(', ')}`);
-  }
+}

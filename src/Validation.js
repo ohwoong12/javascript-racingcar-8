@@ -17,3 +17,14 @@ export function validateCarNameExist(ele) {
     throw new Error(ERROR_MESSAGE.INVALID_CAR_NAME_EMPTY);
   }
 }
+
+export function validateTryNumberType(ele) {
+  if (Number.isNaN(Number(ele)) === true)
+    throw new Error(ERROR_MESSAGE.INVALID_TRY_NUMBER_RANGE);
+}
+
+export function validateTryNumberPositive(ele) {
+  if (ele <= 0) {
+    throw new Error(ERROR_MESSAGE.INVALID_TRY_NUMBER_RANGE);
+  }
+}
