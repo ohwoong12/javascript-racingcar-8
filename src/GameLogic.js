@@ -25,3 +25,12 @@ export async function getTryNumber() {
 
   return tryNumber;
 }
+
+/**
+ * 주어진 배열을 객체 배열로 생성하는 함수
+ * @param {string[]} carNames - 자동차 이름 배열
+ * @returns {object[]}
+ */
+export function createCarsObj(carAry) {
+  return carAry.map((name) => ({ name, score: '' }));
+}
