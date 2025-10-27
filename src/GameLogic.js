@@ -2,6 +2,7 @@ import { Console } from '@woowacourse/mission-utils';
 import { CONSOLE_MESSAGE } from './Constants.js';
 import printExeResult from './printExeResult.js';
 import CircuitScore from './CircuitScore.js';
+import * as Validation from './Validation.js';
 
 /**
  * 자동차 이름을 입력받고 배열로 반환하는 함수
@@ -11,6 +12,9 @@ export async function getCarNames() {
   const carInput = await Console.readLineAsync(CONSOLE_MESSAGE.START_MESSAGE);
 
   const carNamesAry = carInput.split(',');
+
+  // 유효성 검사
+  Validation.validateNameLength(carNamesAry);
 
   return carNamesAry;
 }
